@@ -1,5 +1,5 @@
 ---
-title: AI: A Problem or Our Salvation
+title: AI - A Problem or Our Salvation
 description: Welcome to Hugo Theme Stack
 slug: ai-problem-salvation
 date: 2022-03-06 00:00:00+0000
