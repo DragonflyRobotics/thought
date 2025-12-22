@@ -16,7 +16,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 ---
 
 Alright, we have all heard of ROS, the Robot Operating System. But frankly, we don’t know what it is. Is it an OS? After all, it is in the name. Here is where the tricky part starts. Contrary to its name, it is just a software package that allows you to compile code-stacks, use 3rd party code-stacks, and apply these code-stacks to a peer-to-peer communication system for robotics. That was a lot so let me break this down.
-![https://cdn.freelogovectors.net/wp-content/uploads/2019/02/Ros_logo.png](1.webp)
+<!-- ![https://cdn.freelogovectors.net/wp-content/uploads/2019/02/Ros_logo.png](1.webp) -->
 
 ## Take an Example!
 You have a robot running some ARM device like a Raspberry Pi. It is a 3-wheeled robot and can’t do much complex processing. But you want to do some cool stuff like mapping and navigation. You want the robot to roam around and map the building. Once the map is ready, you want to tell the robot to go to the kitchen and it will follow.
