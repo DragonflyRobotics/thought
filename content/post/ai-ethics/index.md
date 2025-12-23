@@ -3,7 +3,7 @@ title: AI Ethics — Crucial Law or Theoretical Philosophy
 description: Is killing a sentient robot murder?
 slug: ai-ethics-philosophy
 date: 2022-02-16 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
     - Philosophy
     - Ethics
