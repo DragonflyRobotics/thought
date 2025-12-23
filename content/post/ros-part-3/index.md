@@ -89,13 +89,13 @@ catkin_create_pkg basic_ros_topic std_msgs rospy roscpp --pkg_version 0.0.1 --de
 
 Yikes! That is a lot so let me break it down.
 
- * First, we have catkin_create_pkg which is the base command.
- * Next comes the name of the package, in this case basic_ros_topic . This can be anything.
- * Then, we add all the dependencies of the package. Here, we have 3: std_msgs rospy roscpp
-  - stg_msgs is a ROS package that contains a bunch of data types like Float64, String, Int64, and more!
-  - rospy is a library that contains methods for using ROS with Python. This is what we will use today.
-  - roscpp is a library that contains methods for using ROS with C++. We will NOT use this today.
-  - On a side note: ROS also supports Java, Lisp, and some other languages too!
+ * First, we have `catkin_create_pkg` which is the base command.
+ * Next comes the name of the package, in this case `basic_ros_topic` . This can be anything.
+ * Then, we add all the dependencies of the package. Here, we have 3: `std_msgs` `rospy` `roscpp`
+   * `stg_msgs` is a ROS package that contains a bunch of data types like `Float64`, `String`, `Int64`, and more!
+   * `rospy` is a library that contains methods for using ROS with Python. This is what we will use today.
+   * `roscpp` is a library that contains methods for using ROS with C++. We will NOT use this today.
+   * On a side note: ROS also supports Java, Lisp, and some other languages too!
 
 Everything that is mandatory to install has been done. Now on to the optional stuff.
 
@@ -103,3 +103,184 @@ Everything that is mandatory to install has been done. Now on to the optional st
     You don’t need this but it is a good practice to keep.
 
 Now, list the files in the directory. You will see this:
+
+```plaintext
+basic_ros_topic  CMakeLists.txt
+```
+
+Go to `basic_ros_topic` and list again.
+
+```plaintext
+CMakeLists.txt  include  package.xml  src
+```
+
+ * `CMakeLists.txt` — contains all the info catkin needs to compile the project. It contains a list of the libraries, files, packages, and other stuff it has to compile. We will come back to it later.
+ * `package.xml` — contains info like package owner, description, version, maintainer, license, etc. We filled some of it earlier. The only important thing in it is the dependencies definitions. Our command already did this previously.
+
+It looks like this:
+```xml 
+***A BUNCH OF OTHER STUFF***
+<!-- The *depend tags are used to specify dependencies -->
+  <!-- Dependencies can be catkin packages or system dependencies -->
+  <!-- Examples: -->
+  <!-- Use depend as a shortcut for packages that are both build and exec dependencies -->
+  <!--   <depend>roscpp</depend> -->
+  <!--   Note that this is equivalent to the following: -->
+  <!--   <build_depend>roscpp</build_depend> -->
+  <!--   <exec_depend>roscpp</exec_depend> -->
+  <!-- Use build_depend for packages you need at compile time: -->
+  <!--   <build_depend>message_generation</build_depend> -->
+  <!-- Use build_export_depend for packages you need in order to build against this package: -->
+  <!--   <build_export_depend>message_generation</build_export_depend> -->
+  <!-- Use buildtool_depend for build tool packages: -->
+  <!--   <buildtool_depend>catkin</buildtool_depend> -->
+  <!-- Use exec_depend for packages you need at runtime: -->
+  <!--   <exec_depend>message_runtime</exec_depend> -->
+  <!-- Use test_depend for packages you need only for testing: -->
+  <!--   <test_depend>gtest</test_depend> -->
+  <!-- Use doc_depend for packages you need only for building documentation: -->
+  <!--   <doc_depend>doxygen</doc_depend> -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
+```
+
+That bottom part with the `buildtool_depend` and `build_depend` statements define the important stuff.
+
+Navigate to the `src` within that. Now you should be in `USERNAME/catkin_ws/src/PACKAGE_NAME/src`.
+
+Here is where we put all of our code! Make a file called `GyroPublisher.py`. Again, names aren’t super important.
+
+Here is your file structure right now:
+
+```plaintext
+catkin_ws
+  - build
+  - devel
+  - src
+    - basic_ros_topic
+      - CMakeLists.txt
+      - package.xml
+      - include {This directory contains nothing}
+      - CMakeLists.txt
+      - src
+        - GyroPublisher.py
+```
+
+Now let’s start on the code itself. First, you have to import the `rospy` and `std_msgs`.
+
+```python3
+#!/usr/bin/env python3import rospy
+from std_msgs.msg import String
+```
+
+Now we make the function that publishes the actual messages.
+
+```python3
+def publisher():
+    publisher = rospy.Publisher('gyro_rpy', String, queue_size=10) # Make a publisher with a topic called "gyro_rpy" with the type String. queue_size is the max amount of messages that can be queued.
+    rospy.init_node('GyroData', anonymous=True) # Make a node called "GyroData". Anonymous means that the name will be "GyroData" with a lot of random numbers.
+    rate = rospy.Rate(10) # 10Hz
+    while not rospy.is_shutdown(): # Run forever until exit.
+        roll = 135.6 # set values
+        pitch = 13.4 # set values
+        yaw = 3.14159 # set values
+        gyro_mock_data = f"{roll}, {pitch}, {yaw}," # Combine the strings together
+        rospy.loginfo(gyro_mock_data) # log the Publisher data
+        publisher.publish(gyro_mock_data) # Publish
+        rate.sleep() # Slow down the publishing to not choke CPU.
+```
+
+And then we can run it with this:
+
+```python3
+if __name__ == '__main__':
+    try:
+        publisher()
+    except rospy.ROSInterruptException:
+        print("Publisher Interrupted...\nExiting cleanly...")
+        exit()
+```
+
+**IMPORTANT**: You much make sure that your Python file is executable. `sudo chmod +x GyroPublisher.py`
+
+Go the `CMakeLists.txt` and add our python script to the file. This will make sure that catkin will compile it.
+
+```plaintext
+include_directories(
+# include
+  ${catkin_INCLUDE_DIRS}
+  src/GyroPublisher.py
+)
+```
+
+Now go back to `catkin_ws`. Run `catkin_make`. Source the directory `source devel/setup.bash`.
+
+### Running the Node
+
+Start roscore: `roscore`. Now, start publishing: `rosrun basic_ros_topic GyroPublisher.py`.
+
+Check the node using `rosnode list`. We will see our `GyroData` node with a bunch of numbers since it is anonymous.
+
+Check the topic using `rostopic list`. We will see our `gyro_rpy` topic. We can actually see the data using `rostopic echo /gyro_rpy`:
+
+```plaintext
+data: "135.6, 13.4, 3.14159,"
+---
+data: "135.6, 13.4, 3.14159,"
+---
+data: "135.6, 13.4, 3.14159,"
+---
+data: "135.6, 13.4, 3.14159,"
+---
+data: "135.6, 13.4, 3.14159,"
+```
+
+### Receive Data Programmatically
+
+Import libs:
+
+```python3
+#!/usr/bin/env python3
+import rospy
+from std_msgs.msg import String
+```
+
+Define callback to log:
+
+```python3
+def callback(data):
+    rospy.loginfo(rospy.get_caller_id() + f"Recieved Data: {data.data}") # Log data
+```
+
+Make the subscriber node:
+
+```python3
+def sub():
+    rospy.init_node('sub', anonymous=True) # Initialize the noderospy.Subscriber("gyro_rpy", String, callback) # Start a subscriber. The name here is the name of the topic we want to subscribe to.rospy.spin() # Keep the node running until program exits.
+```
+
+Run the script:
+
+```python3
+if __name__ == '__main__':
+    sub()
+```
+
+Again, remember to change the permissions of the file. And run it the same way as the publisher.
+
+## Conclusion
+In this article, you learned how to make Publishers and Subscribers in ROS. If you encounter any errors or have any questions, leave a comment. I will try my best to help you. I hope you enjoyed it. If there is a particular topic in ROS that you want me to cover, let me know in the comments as well!
