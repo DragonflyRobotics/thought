@@ -10,7 +10,7 @@
 [[social]]
 identifier = "home"
 name = "Home"
-url = "/"
+url = "https://krishnashah.dev"
 
 [social.params]
 icon = "home"
