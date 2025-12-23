@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Robotics on Thoughts From a Dragonfly</title><link>https://thought.krishnashah.dev/tags/robotics/</link><description>Recent content in Robotics on Thoughts From a Dragonfly</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://thought.krishnashah.dev/tags/robotics/index.xml" rel="self" type="application/rss+xml"/><item><title>Will Automation Take Your Job?</title><link>https://thought.krishnashah.dev/p/will-automation-take-your-job/</link><pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/will-automation-take-your-job/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/will-automation-take-your-job/cover.webp" alt="Featured image of post Will Automation Take Your Job?" /&gt;&lt;h2 id="what-is-robotics"&gt;What is Robotics?
+&lt;/h2&gt;&lt;p&gt;Robotics, put simply, is the combination of electrical, software, and mechanical engineering to make tasks easier. But, the amount of robots being used in repetitive tasks in warehouses and factories is exponentially growing. This begs the question, will the rapid popularization of automation diminish the need for humans?&lt;/p&gt;
+&lt;h2 id="why-do-people-do-these-jobs"&gt;Why do People do These Jobs?
+&lt;/h2&gt;&lt;p&gt;Oftentimes, people are compelled to do these jobs due to their unfortunate economic conditions. Debt from school, high unemployment due to a desperate global economy, and low levels of education can all put people in these types of jobs. People need the money to survive and a spiraling concern is their ensuing replacement by machines.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/will-automation-take-your-job/1.webp"
+width="650"
+height="488"
+srcset="https://thought.krishnashah.dev/p/will-automation-take-your-job/1_hu_63fbab508db60017.webp 480w, https://thought.krishnashah.dev/p/will-automation-take-your-job/1_hu_3793ebcaf8702dfa.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+&gt;&lt;/p&gt;
+&lt;h2 id="what-can-robots-currently-do"&gt;What Can Robots Currently Do?
+&lt;/h2&gt;&lt;p&gt;Unfortunately, the general public only knows a fraction of the true potential of robotics. Some AIs create perfectly synthetic art from a single sentence description. Others make hyper-realistic human faces and write code for you just from a description! Some robots mow your lawn, weld entire car frames together, and even make Falcon 9 rockets that go to space. AIs have been used to design and manufacture the very airplanes you fly in. The advertisements we see are custom generated for each user using cookies and digital biometrics.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/will-automation-take-your-job/2.webp"
+width="1100"
+height="733"
+srcset="https://thought.krishnashah.dev/p/will-automation-take-your-job/2_hu_4bad117cbd7453b7.webp 480w, https://thought.krishnashah.dev/p/will-automation-take-your-job/2_hu_e67b3e27d72e0d40.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+&gt;&lt;/p&gt;
+&lt;h2 id="the-light-at-the-end-of-the-tunnel"&gt;The Light at the End of the Tunnel!
+&lt;/h2&gt;&lt;p&gt;Despite the insane advancements in robotics, a technological revolution akin to this one has happened before. The industrial revolution, in particular, the advent of the steam engine sharply reduced the need for physical labor. The cotton gin and the mechanized loom left hundreds of thousands unemployed, and because of this people found new jobs to maintain the machines. In fact, this drastically increased the mean education level of people around the world.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/will-automation-take-your-job/3.webp"
+width="620"
+height="330"
+srcset="https://thought.krishnashah.dev/p/will-automation-take-your-job/3_hu_af5e27374a5dea6c.webp 480w, https://thought.krishnashah.dev/p/will-automation-take-your-job/3_hu_a2dc551ab8edede1.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="187"
+data-flex-basis="450px"
+&gt;&lt;/p&gt;
+&lt;h2 id="the-future-outlook"&gt;The Future Outlook
+&lt;/h2&gt;&lt;p&gt;Despite the ominous clouds that hover over the future of AI and jobs, the grim attitude towards robotics research may be unnecessary. The next 50 years will be economically uninviting, the future of robotics will promote higher education, and innovation, and provide people with jobs that require human intelligence.&lt;/p&gt;</description></item><item><title>Beginner’s Guide to ROS — Part 4 “Services In-Depth” Tutorial</title><link>https://thought.krishnashah.dev/p/ros-beginners-guide-part-4/</link><pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/ros-beginners-guide-part-4/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-4/cover.png" alt="Featured image of post Beginner’s Guide to ROS — Part 4 “Services In-Depth” Tutorial" /&gt;&lt;p&gt;&lt;a class="link" href="1.gif" &gt;See here for animation&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="recap-what-is-a-service"&gt;Recap: What is a Service
+&lt;/h2&gt;&lt;p&gt;Remember from the &lt;a class="link" href="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/" &gt;first part&lt;/a&gt; of this series, services are a node that allows you to give and input to get the desired output. If we want to add values, we can make a service that takes two numbers, sums them, and responds with the sum. Remember, they don’t publish continuously. They only respond when the service is called.&lt;/p&gt;
+&lt;p&gt;All good? Time to serve some nodes!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="format-of-this-and-future-articles"&gt;Format of this and future articles:
+&lt;/h3&gt;&lt;p&gt;It is important to understand how this article will go. We will go through an example together. I believe that knowledge can only be attained through practical examples.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="task-1"&gt;Task 1
+&lt;/h2&gt;&lt;p&gt;Take in 2 numbers and respond with the product of those numbers.&lt;/p&gt;
+&lt;h3 id="process"&gt;Process
+&lt;/h3&gt;&lt;p&gt;A node will programmatically call the service and we must do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Get inputs&lt;/li&gt;
+&lt;li&gt;Compute product&lt;/li&gt;
+&lt;li&gt;Respond via topic the product&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="programming"&gt;Programming
+&lt;/h2&gt;&lt;h3 id="making-a-ros-package"&gt;Making a ROS Package
+&lt;/h3&gt;&lt;p&gt;First, we have to make a ROS package which will be our node. That node will contain the code to make a topic and publish the message. There is a built-in command to do this using catkin.&lt;/p&gt;
+&lt;p&gt;First, though, navigate to the workspace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; catkin_ws/src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: You MUST be in &lt;code&gt;src&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Then run this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;catkin_create_pkg basic_ros_service std_msgs rospy roscpp --pkg_version 0.0.1 --description &lt;span class="s2"&gt;&amp;#34;Basic ROS Service&amp;#34;&lt;/span&gt; --license MIT --author &lt;span class="s2"&gt;&amp;#34;Krishna&amp;#34;&lt;/span&gt; --maintainer &lt;span class="s2"&gt;&amp;#34;Krishna&amp;#34;&lt;/span&gt; --rosdistro &lt;span class="s2"&gt;&amp;#34;noetic&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Yikes! That is a lot so let me break it down.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, we have &lt;code&gt;catkin_create_pkg&lt;/code&gt; which is the base command.&lt;/li&gt;
+&lt;li&gt;Next comes the name of the package, in this case &lt;code&gt;basic_ros_service&lt;/code&gt;. This can be anything.&lt;/li&gt;
+&lt;li&gt;Then, we add all the dependencies of the package. Here, we have 3: &lt;code&gt;std_msgs&lt;/code&gt; &lt;code&gt;rospy&lt;/code&gt; &lt;code&gt;roscpp&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;std_msgs&lt;/code&gt; is a ROS package that contains a bunch of data types like &lt;code&gt;Float64&lt;/code&gt;, &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Int64&lt;/code&gt;, and more!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rospy&lt;/code&gt; is a library that contains methods for using ROS with Python. This is what we will use today.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roscpp&lt;/code&gt; is a library that contains methods for using ROS with C++. We will NOT use this today.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rosdistro&lt;/code&gt; states the distribution of ROS we are using. In this case, it is ROS &lt;em&gt;“noetic”&lt;/em&gt;. (This is optional as long as you have sourced your ROS environment)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: Services have additional requirements that we will manually add later!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Everything that is mandatory to install has been done. Now on to the optional stuff.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;These parts are really self-explanatory. It includes the license, description, author, maintainer, and version.&lt;/li&gt;
+&lt;li&gt;You don’t need this but it is a good practice to keep.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, list the files in the directory. You will see this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;basic_ros_service CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Go to &lt;code&gt;basic_ros_service&lt;/code&gt; and list again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CMakeLists.txt include package.xml src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CMakeLists.txt&lt;/code&gt; — contains all the info catkin needs to compile the project. It contains a list of the libraries, files, packages, and other stuff it has to compile. We will come back to it later.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package.xml&lt;/code&gt; — contains info like package owner, description, version, maintainer, license, etc. We filled some of it earlier. The only important thing in it is the dependencies definitions. Our command already did this previously.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;***A BUNCH OF OTHER STUFF***
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!-- The *depend tags are used to specify dependencies --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Dependencies can be catkin packages or system dependencies --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Examples: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use depend as a shortcut for packages that are both build and exec dependencies --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;depend&amp;gt;roscpp&amp;lt;/depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Note that this is equivalent to the following: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;build_depend&amp;gt;roscpp&amp;lt;/build_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;exec_depend&amp;gt;roscpp&amp;lt;/exec_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use build_depend for packages you need at compile time: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use build_export_depend for packages you need in order to build against this package: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;build_export_depend&amp;gt;message_generation&amp;lt;/build_export_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use buildtool_depend for build tool packages: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;buildtool_depend&amp;gt;catkin&amp;lt;/buildtool_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use exec_depend for packages you need at runtime: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use test_depend for packages you need only for testing: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;test_depend&amp;gt;gtest&amp;lt;/test_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use doc_depend for packages you need only for building documentation: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;doc_depend&amp;gt;doxygen&amp;lt;/doc_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;buildtool_depend&amp;gt;&lt;/span&gt;catkin&lt;span class="nt"&gt;&amp;lt;/buildtool_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;roscpp&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;rospy&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;std_msgs&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_export_depend&amp;gt;&lt;/span&gt;roscpp&lt;span class="nt"&gt;&amp;lt;/build_export_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_export_depend&amp;gt;&lt;/span&gt;rospy&lt;span class="nt"&gt;&amp;lt;/build_export_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_export_depend&amp;gt;&lt;/span&gt;std_msgs&lt;span class="nt"&gt;&amp;lt;/build_export_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;roscpp&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;rospy&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;std_msgs&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- The export tag contains other, unspecified, tags --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;export&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Other tools can request additional information be placed here --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/export&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/package&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That bottom part with the &lt;code&gt;buildtool_depend&lt;/code&gt; and &lt;code&gt;build_depend&lt;/code&gt; statements define the important libraries.&lt;/p&gt;
+&lt;p&gt;First, we must make a folder in our package called &lt;code&gt;srv/&lt;/code&gt;. This will hold our custom service. In it make a file called &lt;code&gt;Product.srv&lt;/code&gt;. Put this in it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;float64 a
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;float64 b
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;float64 product
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The first 2 float statements are the input. Then we put &lt;code&gt;---&lt;/code&gt; to show ROS that we are now defining the output. Lastly, we have the output. This allows us to define custom services with custom inputs and outputs.&lt;/p&gt;
+&lt;p&gt;Navigate to the src within that. Now you should be in &lt;code&gt;USERNAME/catkin_ws/src/PACKAGE_NAME/src&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here is where we put all of our code! Make a file called &lt;code&gt;ProductServer.py&lt;/code&gt;. Again, names aren’t super important.&lt;/p&gt;
+&lt;p&gt;Here is your file structure right now:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;catkin_ws
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - build
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - devel
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - src
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - basic_ros_service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - package.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - include {This directory contains nothing}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - src
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - ProductServer.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - srv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - Product.srv
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now let’s start on the code itself. First, you have to import the &lt;code&gt;rospy&lt;/code&gt; and &lt;code&gt;std_msgs&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;print_function&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;basic_ros_service.srv&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Product&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ProductResponse&lt;/span&gt; &lt;span class="c1"&gt;# Import the compiled version of our service. There aren&amp;#39;t files called ProductResponse but ROS will understand that. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rospy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now we make the function that serves the clients.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;product_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# Actual multiplication function&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="c1"&gt;# Find the product from the inputs req.a and req.b and return the product.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;product&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;product_func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Returning [&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;]&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ProductResponse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;product_server&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt; &lt;span class="c1"&gt;# Start the node and server.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;basic_ros_service&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Service&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;basic_ros_service&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Product&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;compute&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Ready to compute.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spin&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And then we can run it with this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;product_server&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: You much make sure that your Python file is executable. sudo chmod +x ProductServer.py&lt;/p&gt;
+&lt;p&gt;Go the &lt;code&gt;CMakeLists.txt&lt;/code&gt; and add our python script to the file. This will make sure that catkin will compile it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;include_directories(
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# include
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ${catkin_INCLUDE_DIRS}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; src/ProductServer.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then, we need to make our SRV file that also needs to be compiled. Add the following lines to your &lt;code&gt;CMakeLists.txt&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;## Generate services in the &amp;#39;srv&amp;#39; folder
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; add_service_files(
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; FILES
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; Product.srv
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)## Generate added messages and services with any dependencies listed here
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; generate_messages(
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; DEPENDENCIES
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; std_msgs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Also, add a dependency to the &lt;code&gt;find_package&lt;/code&gt; section:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;find_package(catkin REQUIRED COMPONENTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; roscpp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; rospy
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; std_msgs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; message_generation
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;We also need to add this dependency to our package.xml. Add the following lines next to all your other depend statements:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;message_generation&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;message_runtime&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now go back to &lt;code&gt;catkin_ws&lt;/code&gt;. Run &lt;code&gt;catkin_make&lt;/code&gt;. Source the directory &lt;code&gt;source devel/setup.bash&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If it compiles, the hardest part is over!&lt;/p&gt;
+&lt;h3 id="running-it"&gt;Running it
+&lt;/h3&gt;&lt;p&gt;Start roscore: &lt;code&gt;roscore&lt;/code&gt;. Now, start serving: &lt;code&gt;rosrun basic_ros_service ProductServer.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Check the node using &lt;code&gt;rosnode list&lt;/code&gt;. We will see our &lt;code&gt;basic_ros_service&lt;/code&gt; service.&lt;/p&gt;
+&lt;p&gt;Check the service using &lt;code&gt;rosservice list&lt;/code&gt;. We will see our &lt;code&gt;basic_ros_service&lt;/code&gt; service and some logger services. Let us try calling our service using CLI.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosservice call /basic_ros_service &lt;span class="s2"&gt;&amp;#34;a: 2.0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;b: 2.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;Hint&lt;/em&gt;: If you forget the format of the command hit TAB twice and it will auto-populate the command.&lt;/p&gt;
+&lt;p&gt;We will see our result of 4.0.&lt;/p&gt;
+&lt;h3 id="receive-data-programmatically"&gt;Receive Data Programmatically
+&lt;/h3&gt;&lt;p&gt;Import libraries:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3from __future__ import print_functionimport sys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rospy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;basic_ros_service.srv&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Define client function and make the appropriate call:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;product_client&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wait_for_service&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;basic_ros_service&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Find our service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;solver&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ServiceProxy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;basic_ros_service&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Product&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Connect to the service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;resp1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;solver&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Make a request&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;resp1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;product&lt;/span&gt; &lt;span class="c1"&gt;# Return the result&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ServiceException&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Service call failed: &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Make the usage helper in case we forget how to use it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;usage&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; [a b]&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run the functions from the CLI arguments:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;usage&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Requesting &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;*&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; * &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; = &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;product_client&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Again, remember to change the permissions of the file. And run it the same way as the publisher.&lt;/p&gt;
+&lt;p&gt;To run it, do &lt;code&gt;rosrun basic_ros_service ProductClient.py 2 2&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;In this article, you learned how to make a Service Server and Client. You also learned how to make custom messages in the form of service. Lastly, you dived a little deeper into the &lt;code&gt;CMakeLists&lt;/code&gt; and the &lt;code&gt;message_generation&lt;/code&gt; library. If you encounter any errors or have any questions, leave a comment. I will try my best to help you. I hope you enjoyed it. If there is a particular topic in ROS that you want me to cover, let me know in the comments as well!&lt;/p&gt;</description></item><item><title>Beginner’s Guide to ROS — Part 3 “Topics In-Depth” Tutorial</title><link>https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/</link><pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/cover.png" alt="Featured image of post Beginner’s Guide to ROS — Part 3 “Topics In-Depth” Tutorial" /&gt;&lt;h2 id="recap-what-is-a-topic"&gt;Recap: What is a Topic
+&lt;/h2&gt;&lt;p&gt;Remember from the &lt;a class="link" href="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/" &gt;first part&lt;/a&gt; of this series, topics are a channel(a pipe), through which communication between nodes(sets of code) occurs. If you want to send sensor data from a microcontroller on a robot to another node on another machine(note how a machine can contain SEVERAL nodes), this would be the way to go.&lt;/p&gt;
+&lt;p&gt;Also, recall how a node can publish a topic and push data to it. Any other node on the network can anonymously subscribe to the topic and digest the information it can provide.&lt;/p&gt;
+&lt;p&gt;All good? Right then, let&amp;rsquo;s get out hands dirty with some code and some errors as well!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="format-of-this-and-future-articles"&gt;Format of this and future articles:
+&lt;/h2&gt;&lt;p&gt;It is important to understand how this article will go. We will go through an example together. I believe that knowledge can only be attained through practical examples.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="task-1"&gt;Task 1
+&lt;/h2&gt;&lt;p&gt;We have a gyroscope on the robot that is publishing data in this format:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Data: 135.6, 13.4, 3.14159
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Format: FLOAT64 FLOAT64 FLOAT64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Axis: roll pitch yaw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The Format and Axis are NOT part of the data. They are just extra information I added.&lt;/p&gt;
+&lt;h3 id="data-formatting"&gt;Data Formatting
+&lt;/h3&gt;&lt;p&gt;We must first consider the format and structure of the data. This is not multidimensional data or a specialized format like an Image or Audio sample. This makes our life very easy.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/2.webp"
+width="798"
+height="604"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/2_hu_a3397b55329155a4.webp 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/2_hu_75886b83d9128eba.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="317px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Next, we must consider the amount of data and its relationship. The roll, pitch, and yaw axes correspond to each other so it is impractical to send them individually like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;135.6
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;13.4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;3.14159
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/3.webp"
+width="560"
+height="492"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/3_hu_61889ce5d4bd5ac0.webp 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-3/3_hu_fe9b3ab98e3aec65.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="273px"
+&gt;&lt;/p&gt;
+&lt;p&gt;ROS has the functionality to make a custom topic type that incorporates 3 &lt;code&gt;Float64&lt;/code&gt; in a single message. But, that is way more complicated and beyond the scope of this article(there may be an article on this soon though).&lt;/p&gt;
+&lt;p&gt;We can also make this a comma-separated string. This way, we can send a single String message that contains the following information:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;#34;135.6, 13.4, 3.14159&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The subscriber can then easily splice the string and extract their information. That won’t be too intensive and still maintain the time-dependent structure of the data.&lt;/p&gt;
+&lt;h2 id="programming"&gt;Programming
+&lt;/h2&gt;&lt;h3 id="making-the-ros-package"&gt;Making the ROS Package
+&lt;/h3&gt;&lt;p&gt;First, we have to make a ROS package which will be our node. That node will contain the code to make a topic and publish the message. There is a built-in command to do this using catkin.&lt;/p&gt;
+&lt;p&gt;First, though, navigate to the workspace:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; catkin_ws/src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;em&gt;NOTE&lt;/em&gt;: You MUST be in src.&lt;/p&gt;
+&lt;p&gt;Then run this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;catkin_create_pkg basic_ros_topic std_msgs rospy roscpp --pkg_version 0.0.1 --description &lt;span class="s2"&gt;&amp;#34;Basic ROS Topic&amp;#34;&lt;/span&gt; --license MIT --author &lt;span class="s2"&gt;&amp;#34;Krishna&amp;#34;&lt;/span&gt; --maintainer &lt;span class="s2"&gt;&amp;#34;Krishna&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Yikes! That is a lot so let me break it down.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, we have &lt;code&gt;catkin_create_pkg&lt;/code&gt; which is the base command.&lt;/li&gt;
+&lt;li&gt;Next comes the name of the package, in this case &lt;code&gt;basic_ros_topic&lt;/code&gt; . This can be anything.&lt;/li&gt;
+&lt;li&gt;Then, we add all the dependencies of the package. Here, we have 3: &lt;code&gt;std_msgs&lt;/code&gt; &lt;code&gt;rospy&lt;/code&gt; &lt;code&gt;roscpp&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stg_msgs&lt;/code&gt; is a ROS package that contains a bunch of data types like &lt;code&gt;Float64&lt;/code&gt;, &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Int64&lt;/code&gt;, and more!&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rospy&lt;/code&gt; is a library that contains methods for using ROS with Python. This is what we will use today.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;roscpp&lt;/code&gt; is a library that contains methods for using ROS with C++. We will NOT use this today.&lt;/li&gt;
+&lt;li&gt;On a side note: ROS also supports Java, Lisp, and some other languages too!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Everything that is mandatory to install has been done. Now on to the optional stuff.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;These parts are really self-explanatory. It includes the license, description, author, maintainer, and version.
+You don’t need this but it is a good practice to keep.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, list the files in the directory. You will see this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;basic_ros_topic CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Go to &lt;code&gt;basic_ros_topic&lt;/code&gt; and list again.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CMakeLists.txt include package.xml src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CMakeLists.txt&lt;/code&gt; — contains all the info catkin needs to compile the project. It contains a list of the libraries, files, packages, and other stuff it has to compile. We will come back to it later.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;package.xml&lt;/code&gt; — contains info like package owner, description, version, maintainer, license, etc. We filled some of it earlier. The only important thing in it is the dependencies definitions. Our command already did this previously.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;***A BUNCH OF OTHER STUFF***
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!-- The *depend tags are used to specify dependencies --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Dependencies can be catkin packages or system dependencies --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Examples: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use depend as a shortcut for packages that are both build and exec dependencies --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;depend&amp;gt;roscpp&amp;lt;/depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Note that this is equivalent to the following: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;build_depend&amp;gt;roscpp&amp;lt;/build_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;exec_depend&amp;gt;roscpp&amp;lt;/exec_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use build_depend for packages you need at compile time: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;build_depend&amp;gt;message_generation&amp;lt;/build_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use build_export_depend for packages you need in order to build against this package: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;build_export_depend&amp;gt;message_generation&amp;lt;/build_export_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use buildtool_depend for build tool packages: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;buildtool_depend&amp;gt;catkin&amp;lt;/buildtool_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use exec_depend for packages you need at runtime: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;exec_depend&amp;gt;message_runtime&amp;lt;/exec_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use test_depend for packages you need only for testing: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;test_depend&amp;gt;gtest&amp;lt;/test_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Use doc_depend for packages you need only for building documentation: --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;doc_depend&amp;gt;doxygen&amp;lt;/doc_depend&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;buildtool_depend&amp;gt;&lt;/span&gt;catkin&lt;span class="nt"&gt;&amp;lt;/buildtool_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;roscpp&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;rospy&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_depend&amp;gt;&lt;/span&gt;std_msgs&lt;span class="nt"&gt;&amp;lt;/build_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_export_depend&amp;gt;&lt;/span&gt;roscpp&lt;span class="nt"&gt;&amp;lt;/build_export_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_export_depend&amp;gt;&lt;/span&gt;rospy&lt;span class="nt"&gt;&amp;lt;/build_export_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;build_export_depend&amp;gt;&lt;/span&gt;std_msgs&lt;span class="nt"&gt;&amp;lt;/build_export_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;roscpp&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;rospy&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;exec_depend&amp;gt;&lt;/span&gt;std_msgs&lt;span class="nt"&gt;&amp;lt;/exec_depend&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- The export tag contains other, unspecified, tags --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;export&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!-- Other tools can request additional information be placed here --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/export&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/package&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That bottom part with the &lt;code&gt;buildtool_depend&lt;/code&gt; and &lt;code&gt;build_depend&lt;/code&gt; statements define the important stuff.&lt;/p&gt;
+&lt;p&gt;Navigate to the &lt;code&gt;src&lt;/code&gt; within that. Now you should be in &lt;code&gt;USERNAME/catkin_ws/src/PACKAGE_NAME/src&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here is where we put all of our code! Make a file called &lt;code&gt;GyroPublisher.py&lt;/code&gt;. Again, names aren’t super important.&lt;/p&gt;
+&lt;p&gt;Here is your file structure right now:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;catkin_ws
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - build
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - devel
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - src
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - basic_ros_topic
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - package.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - include {This directory contains nothing}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - CMakeLists.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - src
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - GyroPublisher.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now let’s start on the code itself. First, you have to import the &lt;code&gt;rospy&lt;/code&gt; and &lt;code&gt;std_msgs&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3import rospy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;std_msgs.msg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now we make the function that publishes the actual messages.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;publisher&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;publisher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Publisher&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;gyro_rpy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;queue_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Make a publisher with a topic called &amp;#34;gyro_rpy&amp;#34; with the type String. queue_size is the max amount of messages that can be queued.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GyroData&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;anonymous&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Make a node called &amp;#34;GyroData&amp;#34;. Anonymous means that the name will be &amp;#34;GyroData&amp;#34; with a lot of random numbers.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rate&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Rate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 10Hz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_shutdown&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt; &lt;span class="c1"&gt;# Run forever until exit.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;roll&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;135.6&lt;/span&gt; &lt;span class="c1"&gt;# set values&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;pitch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;13.4&lt;/span&gt; &lt;span class="c1"&gt;# set values&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;yaw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;3.14159&lt;/span&gt; &lt;span class="c1"&gt;# set values&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;gyro_mock_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;roll&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;, &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;pitch&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;, &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;yaw&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;,&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# Combine the strings together&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loginfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gyro_mock_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# log the Publisher data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;publisher&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;publish&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;gyro_mock_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Publish&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rate&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# Slow down the publishing to not choke CPU.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And then we can run it with this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;publisher&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ROSInterruptException&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Publisher Interrupted...&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;Exiting cleanly...&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: You much make sure that your Python file is executable. &lt;code&gt;sudo chmod +x GyroPublisher.py&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Go the &lt;code&gt;CMakeLists.txt&lt;/code&gt; and add our python script to the file. This will make sure that catkin will compile it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;include_directories(
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# include
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ${catkin_INCLUDE_DIRS}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; src/GyroPublisher.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now go back to &lt;code&gt;catkin_ws&lt;/code&gt;. Run &lt;code&gt;catkin_make&lt;/code&gt;. Source the directory &lt;code&gt;source devel/setup.bash&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="running-the-node"&gt;Running the Node
+&lt;/h3&gt;&lt;p&gt;Start roscore: &lt;code&gt;roscore&lt;/code&gt;. Now, start publishing: &lt;code&gt;rosrun basic_ros_topic GyroPublisher.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Check the node using &lt;code&gt;rosnode list&lt;/code&gt;. We will see our &lt;code&gt;GyroData&lt;/code&gt; node with a bunch of numbers since it is anonymous.&lt;/p&gt;
+&lt;p&gt;Check the topic using &lt;code&gt;rostopic list&lt;/code&gt;. We will see our &lt;code&gt;gyro_rpy&lt;/code&gt; topic. We can actually see the data using &lt;code&gt;rostopic echo /gyro_rpy&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-plaintext" data-lang="plaintext"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data: &amp;#34;135.6, 13.4, 3.14159,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data: &amp;#34;135.6, 13.4, 3.14159,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data: &amp;#34;135.6, 13.4, 3.14159,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data: &amp;#34;135.6, 13.4, 3.14159,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;data: &amp;#34;135.6, 13.4, 3.14159,&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="receive-data-programmatically"&gt;Receive Data Programmatically
+&lt;/h3&gt;&lt;p&gt;Import libs:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;rospy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;std_msgs.msg&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Define callback to log:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loginfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_caller_id&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Recieved Data: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Log data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Make the subscriber node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rospy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;init_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sub&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;anonymous&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Initialize the noderospy.Subscriber(&amp;#34;gyro_rpy&amp;#34;, String, callback) # Start a subscriber. The name here is the name of the topic we want to subscribe to.rospy.spin() # Keep the node running until program exits.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Run the script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python3" data-lang="python3"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Again, remember to change the permissions of the file. And run it the same way as the publisher.&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;In this article, you learned how to make Publishers and Subscribers in ROS. If you encounter any errors or have any questions, leave a comment. I will try my best to help you. I hope you enjoyed it. If there is a particular topic in ROS that you want me to cover, let me know in the comments as well!&lt;/p&gt;</description></item><item><title>AI Ethics — Crucial Law or Theoretical Philosophy</title><link>https://thought.krishnashah.dev/p/ai-ethics-philosophy/</link><pubDate>Wed, 16 Feb 2022 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/ai-ethics-philosophy/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/ai-ethics-philosophy/cover.webp" alt="Featured image of post AI Ethics — Crucial Law or Theoretical Philosophy" /&gt;&lt;p&gt;We have all heard of or even discussed ethics before. Some may have even heard of a new field of philosophy called “AI Ethics.” But what is it really?&lt;/p&gt;
+&lt;h2 id="ai-ethics"&gt;AI Ethics
+&lt;/h2&gt;&lt;p&gt;This emerging field of philosophy deals with the primary question &lt;em&gt;“If a person made a sentient machine or program, would shutting the program down or turning off the computer be equivalent to killing it?”&lt;/em&gt; Your immediate answer may be &lt;em&gt;“No, it is just a computer that WE made!”&lt;/em&gt; But let me provide you with a series of questions that provide depth to this problem!&lt;/p&gt;
+&lt;h2 id="iq"&gt;IQ
+&lt;/h2&gt;&lt;p&gt;IQ is a general measure of multi-spatial thinking. If a robot has the IQ of a dog or cat, can’t we equate it to a dog or cat? But others might say that AI is not really thinking and is simply predicting from a defined set of data. But how do we know what humans or other animals are thinking? Just because we have a larger dataset and more processing power doesn’t mean we are thinking.&lt;/p&gt;
+&lt;h2 id="material-crisis"&gt;Material Crisis
+&lt;/h2&gt;&lt;p&gt;Another justification to &lt;em&gt;“pull the plug”&lt;/em&gt; might be to say that the AI is simply a bunch of transistors, plastic, and metal. But how can we consider humans superior to robots? After all, we are made of oxygen, hydrogen, nitrogen, and other elements. Our brain is simply a bunch of electrical signals(sounds familiar?), and our emotions are just specific chemical compounds released during specific events. Computers(frankly technology in general) are just a simple reflection of us and the way we think.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-ethics-philosophy/1.webp"
+width="612"
+height="612"
+srcset="https://thought.krishnashah.dev/p/ai-ethics-philosophy/1_hu_8cd23360a88a285f.webp 480w, https://thought.krishnashah.dev/p/ai-ethics-philosophy/1_hu_f18d47618d93d675.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+&gt;&lt;/p&gt;
+&lt;h2 id="ship-of-theseus-problem"&gt;Ship of Theseus Problem
+&lt;/h2&gt;&lt;p&gt;Imagine you have a boat that is sailing a hundred miles. But, you couldn’t shell out enough shillings for a fancy-pants boat so you went to the dark alley at midnight and bought one from a guy in a hood. So along the way, your boat fell apart piece by piece and you summoned replacement parts to fix it. When it reached its destination, you ended up replacing EVERY single part of it. Is this still the same boat? If so, what if a storm destroyed the entire boat and you built it from scratch so it is identical to the original? Is it still the same boat then?&lt;/p&gt;
+&lt;p&gt;The scenario here is asking if it is the parts that define an object or the experience the boat went through. This matters because depending on the interpretation you take you could argue that if you turn off the AI, but turn on the exact same version later, you didn’t kill the ai. Now, you may have a completely different opinion about the Material Crisis. Now, it doesn’t matter if you are made of steel or cells, what matters is the experiences you make with it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-ethics-philosophy/2.webp"
+width="1100"
+height="733"
+srcset="https://thought.krishnashah.dev/p/ai-ethics-philosophy/2_hu_adfe6a08d21a4da6.webp 480w, https://thought.krishnashah.dev/p/ai-ethics-philosophy/2_hu_9cd3e4ff6f72747e.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+&gt;&lt;/p&gt;
+&lt;h2 id="so-what"&gt;So What?
+&lt;/h2&gt;&lt;p&gt;What sets us(humans made of cells, flesh, and bone) from them(robots made of steel, motors, and a frame)? If there is no major difference setting us apart, then why would killing a sentient robot be justified? And if a robot has consciousness, should we consider it equal to us? After all, humans consider themselves superior to animals in many ways.&lt;/p&gt;
+&lt;h2 id="so-is-there-just-1-answer"&gt;So is there just 1 answer?
+&lt;/h2&gt;&lt;p&gt;No, not really. What if an AI has the potential to be sentient but is still growing? Can we kill that? Just because it isn’t currently sentient doesn’t mean anything. Humans come from a single cell that is not technically sentient. But as the baby develops, it grows the ability to have sentience.&lt;/p&gt;
+&lt;p&gt;There are 3 frames of view:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No life matters and killing anything(human, animal, or robot) is okay.&lt;/li&gt;
+&lt;li&gt;Some life matters(ethnocentric; humans matter but not animals and robots)&lt;/li&gt;
+&lt;li&gt;All life matters and killing is NOT justified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="potential-ideas"&gt;Potential Ideas
+&lt;/h2&gt;&lt;h3 id="battery"&gt;Battery
+&lt;/h3&gt;&lt;p&gt;What if we make a sentient AI and then let it run on battery power until it drains and dies. Technically, it lived its maximum lifespan and its “heart stopped beating”. But you, the inventor, had the ability to swap or attach another battery or an external power source. That is equivalent to a doctor giving a heart transplant. Would a doctor deny your transplant, would you?&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-ethics-philosophy/3.webp"
+width="553"
+height="311"
+srcset="https://thought.krishnashah.dev/p/ai-ethics-philosophy/3_hu_ac8fcb6f7a870185.webp 480w, https://thought.krishnashah.dev/p/ai-ethics-philosophy/3_hu_a8ac5108ed684d71.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;&lt;/p&gt;
+&lt;h3 id="teach-self-termination-sequence"&gt;Teach Self-Termination Sequence
+&lt;/h3&gt;&lt;p&gt;What if the first thing you taught the AI is to terminate and wipe the OS on user command? That would be the equivalent of a human “committing suicide”. But, didn’t you “pressure” the robot to do it? Just because a hitman kills a person doesn’t mean that the employer(of the hitman) isn’t at fault.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-ethics-philosophy/4.webp"
+width="350"
+height="233"
+srcset="https://thought.krishnashah.dev/p/ai-ethics-philosophy/4_hu_35fa207c274d3991.webp 480w, https://thought.krishnashah.dev/p/ai-ethics-philosophy/4_hu_f85049b11e4a5768.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+&gt;&lt;/p&gt;
+&lt;h3 id="soul"&gt;Soul
+&lt;/h3&gt;&lt;p&gt;Many may argue that a soul sets biological beings apart from robots. But, what is a soul? Who made it? Is it a subconscious state of the brain or a separate entity running our body? Or is a soul just something made up by humans to try to set them apart from everything else?&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-ethics-philosophy/5.webp"
+width="1600"
+height="640"
+srcset="https://thought.krishnashah.dev/p/ai-ethics-philosophy/5_hu_4dfd9450c4e40129.webp 480w, https://thought.krishnashah.dev/p/ai-ethics-philosophy/5_hu_bfb599aa0452fd2b.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="250"
+data-flex-basis="600px"
+&gt;&lt;/p&gt;
+&lt;h2 id="conclusion"&gt;Conclusion
+&lt;/h2&gt;&lt;p&gt;Oftentimes, this decision involves religion and personal biases. But, it is crucial to think about these topics as General Intelligence may not be as far as we think, or hope!&lt;/p&gt;</description></item><item><title>Beginner's Guide to ROS — Part 1 “The Working Principle” Tutorial</title><link>https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/cover.png" alt="Featured image of post Beginner's Guide to ROS — Part 1 “The Working Principle” Tutorial" /&gt;&lt;p&gt;Alright, we have all heard of ROS, the Robot Operating System. But frankly, we don’t know what it is. Is it an OS? After all, it is in the name. Here is where the tricky part starts. Contrary to its name, it is just a software package that allows you to compile code-stacks, use 3rd party code-stacks, and apply these code-stacks to a peer-to-peer communication system for robotics. That was a lot so let me break this down.&lt;/p&gt;
+&lt;!-- ![https://cdn.freelogovectors.net/wp-content/uploads/2019/02/Ros_logo.png](1.webp) --&gt;
+&lt;h2 id="take-an-example"&gt;Take an Example!
+&lt;/h2&gt;&lt;p&gt;You have a robot running some ARM device like a Raspberry Pi. It is a 3-wheeled robot and can’t do much complex processing. But you want to do some cool stuff like mapping and navigation. You want the robot to roam around and map the building. Once the map is ready, you want to tell the robot to go to the kitchen and it will follow.&lt;/p&gt;
+&lt;p&gt;This is a very complex problem to solve for a weak Raspberry Pi. But then, genius strikes! You also have a powerful PC with a GPU and all. What if the PC does all the hard stuff and sends all the results to the Pi? This is what ROS does(essentially).&lt;/p&gt;
+&lt;h3 id="important-note"&gt;Important Note
+&lt;/h3&gt;&lt;p&gt;What I am about to present from here on is strictly applicable to ROS1, not ROS2. ROS2 runs a more complex system that is drastically different from ROS1. I might make an article later for ROS2.
+&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/2.gif"
+width="400"
+height="202"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/2_hu_af1400026fb21b35.gif 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/2_hu_c4a650efc87507f6.gif 1024w"
+loading="lazy"
+alt="https://media1.tenor.com/images/7dcc0b5a2c64d741b6edd12a88738cf9/tenor.gif?itemid=4767352"
+class="gallery-image"
+data-flex-grow="198"
+data-flex-basis="475px"
+&gt;&lt;/p&gt;
+&lt;h2 id="what-a-standard-ros-system-looks-like"&gt;What a standard ROS system looks like?
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/3.webp"
+width="1725"
+height="769"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/3_hu_cbce5e393f2086e6.webp 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-1/3_hu_af000369cbd8689.webp 1024w"
+loading="lazy"
+alt="https://upload.wikimedia.org/wikipedia/commons/e/e7/ROS-master-node-topic.png"
+class="gallery-image"
+data-flex-grow="224"
+data-flex-basis="538px"
+&gt;
+Let us start at the top and work down! At the top is the master. This is running the code to handle all the messages from the various nodes. But what are these nodes sending?&lt;/p&gt;
+&lt;h3 id="nodes"&gt;Nodes
+&lt;/h3&gt;&lt;p&gt;So a Node is a big umbrella that can publish various topics, services, and actions. It could be the camera node that published images and can supply other info as a service. It can be any way you think you can logically organize your project.&lt;/p&gt;
+&lt;h3 id="topics"&gt;Topics
+&lt;/h3&gt;&lt;p&gt;Topics are what you think they are. They are names under which messages pass. The messages could be a String like, “Hi robot revolution!”, an Int like 42, or a custom one you made up like an image. For all we know, you can send any sort of data formats like arrays with images and strings, or a PointCloud, etc. These custom messages are made using .msg files. In it, you can specify the structure of your message and after compiling and a bit of coding, they can be used.&lt;/p&gt;
+&lt;h3 id="services"&gt;Services
+&lt;/h3&gt;&lt;p&gt;A service is, well, a service. One node can request another node to do something based on data. I can give a node the numbers 2 and 3 and the node gives me back 5. Sorcery, I know! These work the same as messages in the way they are made. You would use a .srv file to make them.&lt;/p&gt;
+&lt;h3 id="actions"&gt;Actions
+&lt;/h3&gt;&lt;p&gt;You tell the robot to go forward. But then you forget! You can request the action node to return a status. Wait, the robot is about to fall off a cliff! You can also cancel the action. It is more complex than this but this is the basics.&lt;/p&gt;
+&lt;p&gt;Anyway, the master handles all the messages, services, and actions. A node is a community of code that contains topics, services, and actions. There are 2 things nodes can do.&lt;/p&gt;
+&lt;h3 id="publish"&gt;Publish
+&lt;/h3&gt;&lt;p&gt;Publishers publish data and don’t care about the subscriber. For all we know, the publisher could be publishing data to an alien from Mars.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="4.webp" &gt;https://www.utahpeoplespost.com/wp-content/uploads/2015/11/NASA-Announces-Big-Reveal-About-Mars.-What-Is-It.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="subscribe"&gt;Subscribe
+&lt;/h3&gt;&lt;p&gt;&lt;a class="link" href="5.gif" &gt;https://cdn.dribbble.com/users/5528375/screenshots/14069669/subscribe_animated_gif.gif&lt;/a&gt;
+No not that subscribe. Subscribers subscribe to a publisher, hence start receiving the data being published. Again, the subscriber just knows the name of the publisher. The exchange is anonymous.&lt;/p&gt;
+&lt;h2 id="ros-cli"&gt;ROS CLI
+&lt;/h2&gt;&lt;p&gt;This is also a tricky part of ROS. There are several commands but here is how they work. You have a command for each of the main sections I talked about above.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;roscore - to start Master server.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosnode - to help control ROS nodes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rostopic - to manage topics
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosservice - to manage services
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosaction - to manage action
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosrun - this is the command we use the most. It is to run your code once it is compiled.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You see how each of the commands is broken up into smaller sections based on different aspects of ROS. Note, that there are more commands than shown here. Each one of these commands has sub-commands. I will expand later in other parts on what they all do, but for now, know that you can read(echo) messages, run services and actions, measure the frequency and size of topics, and much more.&lt;/p&gt;
+&lt;h2 id="rviz"&gt;RVIZ
+&lt;/h2&gt;&lt;p&gt;RVIZ is a lifesaver for us mere mortals. Only the ROS Gods can live without it. It is a visualization tool where any sort of topic, message, or info coming in or out can be seen. PointClouds, odometry, images, video, numbers, and more. It can be run by simple typing “rviz” or “rosrun rviz rviz” but I will get into that later.&lt;/p&gt;
+&lt;h2 id="what-is-a-compiler"&gt;What is a compiler?
+&lt;/h2&gt;&lt;p&gt;We all know a compiler like g++ that takes C++ code and converts it to machine code that the computer better understands. Well, catkin(ROS compiler) is like g++ on steroids. It takes the code with some config information and compiles the entire node with respect to ROS libraries and other nodes. It can see the entire project and compile everything at once.&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="6.gif" &gt;https://media1.tenor.com/images/7eece0a4e5ecd2cb8b91a122d5d8efd1/tenor.gif?itemid=13161198&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="practice-question"&gt;Practice Question
+&lt;/h3&gt;&lt;p&gt;Can you compile Python?&lt;/p&gt;
+&lt;p&gt;Answer: Yes!&lt;/p&gt;
+&lt;p&gt;Any programmer would say NO! But the magical catkin can! It compiles Python too. This way, ROS can use both Python and C++ together.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I know the professional developers must be frowning down on me but this was a conceptual way to understand it. Don’t worry, I will explain later!&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Beginner’s Guide to ROS — Part 2 “Installation and First Run” Tutorial</title><link>https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/</link><pubDate>Mon, 08 Nov 2021 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/cover.jpg" alt="Featured image of post Beginner’s Guide to ROS — Part 2 “Installation and First Run” Tutorial" /&gt;&lt;p&gt;Alright, be honest. We all were like, “ROS sounds cool.” Let me install it and see how it works, plus how hard can installing it be(famous last words). Then you search up “ROS install Ubuntu”, and you find 50 guides all saying something different. Some require 4 hours of compiling while others simply use ATP. What is the deal with all of this?&lt;/p&gt;
+&lt;h2 id="method-1-easy-way-out"&gt;Method 1: Easy way out!
+&lt;/h2&gt;&lt;p&gt;&lt;a class="link" href="1.webp" &gt;https://imgr.search.brave.com/HrMbmi1kSMEnJflnt8rSZnsbBd8q3LKt_4gurC8rsos/fit/602/606/ce/1/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2Q5LzJm/L2RkL2Q5MmZkZGQ1/NGFkOTA3NTQ5NWY0/ODdjMTRhM2ZjODQ1/LmpwZw&lt;/a&gt;
+Now how this one works is simple. ROS only supports LTS versions of Ubuntu. That is 20.04, 18.04, 16.04, 14.04, etc. Now for each LTS version, there is a version of ROS. For 20.04, it is Noetic Ninjemys, for 18.04, it was Melodic Morenia, etc. You must be wondering, “Can you communicate between other versions of ROS?” Absolutely! They will communicate flawlessly with each other. They communicate over an IP Protocol that is common and reverse compatible. It is a little difficult to communicate between ROS1 and ROS2 since you must use ros_bridge. But that’s for another day!&lt;/p&gt;
+&lt;h3 id="for-ubuntu-2004-noetic-ninjemys"&gt;For Ubuntu 20.04 (Noetic Ninjemys)
+&lt;/h3&gt;&lt;p&gt;Now, unless you have some crazy dependency, the latest ROS1 version is the way to go for beginners. The latest as of December 12, 2021, is ROS Noetic. Installing previous versions will be a little harder. 1 more thing, I will show installation on Ubuntu 20.04 but other operating systems like Arch, Windows, and Debian are available. Here is how you can install Noetic Ninjemys:&lt;/p&gt;
+&lt;p&gt;Link to other OS installations: &lt;a class="link" href="http://wiki.ros.org/noetic/Installation" target="_blank" rel="noopener"
+&gt;http://wiki.ros.org/noetic/Installation&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;(&lt;/span&gt;Usually &lt;span class="k"&gt;done&lt;/span&gt; by default&lt;span class="o"&gt;)&lt;/span&gt; Make sure &lt;span class="s2"&gt;&amp;#34;restricted,&amp;#34;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;universe,&amp;#34;&lt;/span&gt; and &lt;span class="s2"&gt;&amp;#34;multiverse&amp;#34;&lt;/span&gt; are enabled. Check https://help.ubuntu.com/community/Repositories/Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo sh -c &lt;span class="s1"&gt;&amp;#39;echo &amp;#34;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&amp;#34; &amp;gt; /etc/apt/sources.list.d/ros-latest.list&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# Add their repository to your machine&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install curl &lt;span class="c1"&gt;# Usually comes preinstalled&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc &lt;span class="p"&gt;|&lt;/span&gt; sudo apt-key add - &lt;span class="c1"&gt;# Add repository key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt update &lt;span class="c1"&gt;# Update repository listing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install ros-noetic-desktop-full &lt;span class="c1"&gt;# Contains all essential packages like perception and simulation. Perfect for beginers. Others are &amp;#34;ros-noetic-ros-base&amp;#34; which is the bare-bones. The middle version is &amp;#34;ros-noetic-desktop&amp;#34; which had some debug tools but none of the perception and simulation packages. You must source the ROS environment everytime so you can run &amp;#34;source /opt/ros/noetic/setup.bash&amp;#34; but if you don&amp;#39;t want to run it everytime you spawn a terminal&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;source /opt/ros/noetic/setup.bash&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Close all terminal instances and reopen terminal.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Update ROS Core Dependencies:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential &lt;span class="c1"&gt;# Install tools&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install python3-rosdep &lt;span class="c1"&gt;# Install rosdep(tool)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo rosdep init &lt;span class="c1"&gt;# Initialize rosdep&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosdep update &lt;span class="c1"&gt;# Update rosdep&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That’s it!&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/2.webp"
+width="1000"
+height="1000"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/2_hu_48031948f9da0850.webp 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/2_hu_819830ff2835d11b.webp 1024w"
+loading="lazy"
+alt="https://imgr.search.brave.com/axjiqL7zpc8jGQb8kFbQhr1OBrQGgVcOUdtLqtccFZg/fit/1000/1000/ce/1/aHR0cHM6Ly9paDAu/cmVkYnViYmxlLm5l/dC9pbWFnZS4yOTYy/NjMwMTkuMDUzMi9m/bGF0LDEwMDB4MTAw/MCwwNzUsZi51My5q/cGc"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+&gt;&lt;/p&gt;
+&lt;h2 id="method-2-from-source-advanced-users"&gt;Method 2: From Source (Advanced Users)
+&lt;/h2&gt;&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/3.gif"
+width="774"
+height="1200"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/3_hu_81b033636498b175.gif 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/3_hu_d7ff8ccee0b2f0ad.gif 1024w"
+loading="lazy"
+alt="https://imgr.search.brave.com/sejDYrgkO1uLxFatbZfl_mUjwZsSjn6fVZjSQtNMab8/fit/800/1200/ce/1/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2NkL2Rm/LzdlL2NkZGY3ZWE0/OGFkM2Q1NDA3ZTJk/ZjY3NDU4Nzc4N2Jh/LmdpZg.gif"
+class="gallery-image"
+data-flex-grow="64"
+data-flex-basis="154px"
+&gt;
+There is a separate way where you can install and compile all the ~150 packages from source. This is for the professional developers or the confused beginners(get it?). Please let me know in the comments if you want me to make a separate article on this!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="setup-development-environment"&gt;Setup Development Environment
+&lt;/h2&gt;&lt;p&gt;Alright, the installation is finally complete. Not so fast! We still have to make the development environment. Don’t worry, it is SUPER easy!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir WORKSPACE_NAME &lt;span class="c1"&gt;# Go to the place you want your code, environment, and packages to reside. Replace WORKSPACE with a name of your choice. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; WORKSPACE_NAME &lt;span class="c1"&gt;# Go into directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir src &lt;span class="c1"&gt;# DO NOT change this name or it won&amp;#39;t compile. Also, DO NOT cd into it&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;catkin_make &lt;span class="c1"&gt;# compile your blank project!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="take-if-for-a-spin"&gt;Take if for a Spin!
+&lt;/h2&gt;&lt;p&gt;Finally, the moment you have all been waiting for…your very first ROS1 command!&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/4.webp"
+width="750"
+height="1000"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/4_hu_bb66b9a031f7b510.webp 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/4_hu_11694c1568e6b512.webp 1024w"
+loading="lazy"
+alt="https://imgr.search.brave.com/JXshFVJjUjk5DWOlW7lsKhJQ0m6a_1uJMGcl68P-qk8/fit/750/1000/ce/1/aHR0cHM6Ly9paDEu/cmVkYnViYmxlLm5l/dC9pbWFnZS44NzUx/MTE5MDUuNDc5OC9m/bGF0LDc1MHgsMDc1/LGYtcGFkLDc1MHgx/MDAwLGY4ZjhmOC5q/cGc"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+&gt;&lt;/p&gt;
+&lt;h3 id="note"&gt;Note:
+&lt;/h3&gt;&lt;p&gt;Please note: this article shows you how to set up ROS on 1 computer. Meaning that the Master and Nodes are on the same computer. TO communicate across many computers, there is a painful setup procedure that I won’t make you endure just yet(brace yourself for the future).&lt;/p&gt;
+&lt;h3 id="ros-core"&gt;ROS Core
+&lt;/h3&gt;&lt;p&gt;ROS1(not ROS2) works on the following system:
+&lt;img src="https://thought.krishnashah.dev/5.png"
+loading="lazy"
+alt="https://upload.wikimedia.org/wikipedia/commons/e/e7/ROS-master-node-topic.png"
+&gt;
+ROS Core manages the master node. It manages all the communication happening in the ROS network. You cannot run any ROS nodes without it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;roscore &lt;span class="c1"&gt;# Spawns a ROS master node.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="turtle-sim"&gt;Turtle Sim
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/7.webp"
+width="600"
+height="449"
+srcset="https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/7_hu_422b8b62b30eafac.webp 480w, https://thought.krishnashah.dev/p/ros-beginners-guide-part-2/7_hu_4ffdb71b6425e79a.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+&gt;&lt;/p&gt;
+&lt;p&gt;The first thing you are going to do is make a little turtle draw things on a screen using your arrows.&lt;/p&gt;
+&lt;p&gt;If you are short on time, install it using APT:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install ros-&lt;span class="k"&gt;$(&lt;/span&gt;rosversion -d&lt;span class="k"&gt;)&lt;/span&gt;-turtlesim &lt;span class="c1"&gt;# install the turtle sim package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;If you want to learn ROS properly, do this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; WORKSPACE_NAME/src &lt;span class="c1"&gt;# Go to the source directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt install git &lt;span class="c1"&gt;# Install git if you don&amp;#39;t have it.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/ros/ros_tutorials.git &lt;span class="c1"&gt;# Download the turtle_sim and lesson packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; .. &lt;span class="c1"&gt;# Go to main directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;catkin_make &lt;span class="c1"&gt;# Compile the project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;source&lt;/span&gt; devel/setup.bash &lt;span class="c1"&gt;# Re-Source compiled files.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now, let us run it! Make sure roscore is running on a different terminal&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosrun turtlesim turtlesim_node
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# command node script&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This should show a box where you can move a turtle around. But more importantly, is the things happening behind the scene.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rosnode list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;What do you see? Can you find our node?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rostopic list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Where is the turtle location topic? Did you see it?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rostopic &amp;lt;TURTLE_POSE_TOPIC_NAME&amp;gt; &lt;span class="nb"&gt;echo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace the first argument with the topic name you previously found. Can you see the coordinates move as the turtle runs around(or should I say crawl around)?&lt;/p&gt;
+&lt;h3 id="things-to-note"&gt;Things to note:
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;cmd_vel&lt;/strong&gt;: This is what we call a Twist message. It contains target velocity values for 3 axes of translation and 3 axes of rotation. You can imagine how useful this is for a remote-controlled robot.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Command structure&lt;/strong&gt;: Did you notice the pattern in the commands. It is the object you are accessing(rosnode, rosservice, rostopic, rosrun, etc), then the action you want to perform(echo, list, hz, etc), then the arguments. We will dive into the depth of these commands in another article.&lt;/p&gt;</description></item><item><title>AI - A Problem or Our Salvation</title><link>https://thought.krishnashah.dev/p/ai-problem-salvation/</link><pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate><guid>https://thought.krishnashah.dev/p/ai-problem-salvation/</guid><description>&lt;img src="https://thought.krishnashah.dev/p/ai-problem-salvation/cover.jpg" alt="Featured image of post AI - A Problem or Our Salvation" /&gt;&lt;p&gt;When it comes to AI or robotics, the common public reaction is perceivable. When they talk about global domination by robots or job loss due to advances in robotics, their assumptions are highly based on science fiction and not that much on reality. In fact, robotics is an indistinguishable part of our lives and essential to us in a controlled manner. Whether you are strongly against anything related to robotics or are a lead engineer at &lt;a class="link" href="https://bostondynamics.com/" target="_blank" rel="noopener"
+&gt;Boston Dynamics&lt;/a&gt;, it is indisputable that robotics is in our everyday lives.
+&lt;img src="https://thought.krishnashah.dev/p/ai-problem-salvation/1.webp"
+width="1000"
+height="769"
+srcset="https://thought.krishnashah.dev/p/ai-problem-salvation/1_hu_afa071431f89701a.webp 480w, https://thought.krishnashah.dev/p/ai-problem-salvation/1_hu_c8a9a3b1a7475bb7.webp 1024w"
+loading="lazy"
+alt="Image 1"
+class="gallery-image"
+data-flex-grow="130"
+data-flex-basis="312px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Everything from a toaster, to your computer, there is some form of robotics in it. For example, while you are browsing on Amazon and it suggests you exactly what you are looking for, you witnessed AI. AI has just helped you and Amazon. After introducing this AI, Amazon saw a 29% increase in sales and $12.83 billion more dollars in revenue. This shows that AI is helping customers like you and companies like Amazon earn money. In fact, our lives are also at the hands of AI. Boeing and other companies are creating more efficient airplane air-frames using AI. They have trained the AI to take their requirements and it will design the most perfect air-frame.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-problem-salvation/2.webp"
+width="852"
+height="480"
+srcset="https://thought.krishnashah.dev/p/ai-problem-salvation/2_hu_4c3f30e2f06485c6.webp 480w, https://thought.krishnashah.dev/p/ai-problem-salvation/2_hu_d89679f3cca419ee.webp 1024w"
+loading="lazy"
+alt="Image by @boscorelli on Shutterstock"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+&gt;&lt;/p&gt;
+&lt;p&gt;According to Boeing, their new Boeing 777 will be 100% computer generated and assembled online before they even bring out the materials! In fact, the computer will even create a special mixture of metals and composites to make the air-frame lighter! Look around, every item near you is probably manufactured in a factory. In the year 2020 alone, 1.64 million industrial robots are used in factories around the globe and analytics say that they will replace 20 million factory jobs by 2030! This raises the concern that our interdependence might lead to severe problems depicted by literature.&lt;/p&gt;
+&lt;p&gt;The ethical aspect of AI has been an extremely controversial topic. There is great hope that AI can personalize school learning plans, help disabled people, and revolutionize our lives, but there must be a balance. At a deeper level, AI is just a math equation that runs behind it but its ability to gradually learn is one fact that concerns many.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-problem-salvation/3.webp"
+width="546"
+height="223"
+srcset="https://thought.krishnashah.dev/p/ai-problem-salvation/3_hu_ba4e6a8c11446862.webp 480w, https://thought.krishnashah.dev/p/ai-problem-salvation/3_hu_bc81f184174d4ad6.webp 1024w"
+loading="lazy"
+alt="The basic formula for AI."
+class="gallery-image"
+data-flex-grow="244"
+data-flex-basis="587px"
+&gt;&lt;/p&gt;
+&lt;p&gt;Though, if AI can be used conservatively and concisely, the severity of the consequence may be minimal. That raises a question though; as human beings, we are very curious, and we will strive to learn more and eventually lead to problems much greater than our imagination. But how severe is severe?&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-problem-salvation/4.webp"
+width="500"
+height="281"
+srcset="https://thought.krishnashah.dev/p/ai-problem-salvation/4_hu_fa033ece9db8f40.webp 480w, https://thought.krishnashah.dev/p/ai-problem-salvation/4_hu_42522172c046466.webp 1024w"
+loading="lazy"
+alt="Bryan Ward | Flickr"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="427px"
+&gt;&lt;/p&gt;
+&lt;p&gt;That rhetorical question has quite a simple answer. AI is being developed in individual parts like some work on vision while others work on speech. Other engineers work on the robotic humanoid part. When a person gets the idea of combining all the parts, he/she will make a close replica of a human, and if not given the right knowledge of ethics and society, the robot will believe that it is one of us. As humans are quite violent, in the sense that we are always fighting each other, the robots will do the same. Many people discriminate, the robots will do the same. They will be our replica only made of metal and 100 times stronger. This is what we fear and if not controlled, we won’t have to watch movies to fear it.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://thought.krishnashah.dev/p/ai-problem-salvation/5.webp"
+width="720"
+height="480"
+srcset="https://thought.krishnashah.dev/p/ai-problem-salvation/5_hu_f3650369974754d4.webp 480w, https://thought.krishnashah.dev/p/ai-problem-salvation/5_hu_20235fd6d51cd81.webp 1024w"
+loading="lazy"
+alt="Image 5"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+&gt;&lt;/p&gt;
+&lt;p&gt;To conclude, the question is not whether AI is ethical but rather where is the limit. We must learn to live within boundaries and know that exceeding them can have grave consequences. The research our scientists have done is truly incredible but only to a limit. The next time you pull out a mobile phone or any other device, remember our interdependence with it and its similarity to any other robot or AI.&lt;/p&gt;</description></item></channel></rss>
